@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <script>
         tailwind.config = {
           theme: {
@@ -13,12 +13,12 @@
                 sec: '#FAEFB1',
             },
             fontFamily: {
-                'poppins': ['Poppins', 'sans-serif'] 
+                'poppins': ['Poppins'] 
             },
           }
         }
       </script>
-    <title>The Spaces</title>
+    <title>The Spaces | Co-workingspace</title>
 </head>
 <body class="font-poppins">
     <div class="bg-main h-24">
