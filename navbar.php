@@ -20,7 +20,7 @@
       </script>
     <title>The Spaces | Co-workingspace</title>
 </head>
-<body class="font-poppins">
+<body class="sticky font-poppins">
     <div class="bg-main h-24">
         <div class="flex justify-end">
             <div class="flex text-2xl py-7 mx-1 font-medium text-[color:white]">
