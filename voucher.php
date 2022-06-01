@@ -125,7 +125,9 @@
 			
 			<div class="coupon-row">
 				<span id="cpnCode">STEALDEAL20</span>
-				<span id="cpnBtn">COPY CODE</span>
+				<a href="pembayaran.php">
+					<span id="cpnBtn">Claim</span>
+				</a>
 			</div>
 			<p>Valid till : 22 Agustus 2022</p>
 			<div class="circle1"></div>
@@ -139,7 +141,9 @@
 			</center>
 			<div class="coupon-row">
 				<span id="cpnCode1">STEALDEAL20</span>
-				<span id="cpnBtn1">COPY CODE</span>
+				<a href="pembayaran.php">
+					<span id="cpnBtn1">Claim</span>
+				</a>
 			</div>
 
 			<p>Valid till : 22 Agustus 2022</p>
@@ -153,9 +157,9 @@
 		var cpnCode = document.getElementById("cpnCode");
 		cpnBtn.onclick = function(){
 			navigator.clipboard.writeText(cpnCode.innerHTML);
-			cpnBtn.innerHTML = "COPIED";
+			cpnBtn.innerHTML = "Claimed";
 			setTimeout(function(){
-				cpnBtn.innerHTML = "COPY CODE";
+				cpnBtn.innerHTML = "Claim";
 			}, 3000);
 		}
 	</script>
@@ -164,9 +168,9 @@
 		var cpnCode1 = document.getElementById("cpnCode1");
 		cpnBtn1.onclick = function(){
 			navigator.clipboard.writeText(cpnCode1.innerHTML);
-			cpnBtn1.innerHTML = "COPIED";
+			cpnBtn1.innerHTML = "Claimed";
 			setTimeout(function(){
-				cpnBtn1.innerHTML = "COPY CODE";
+				cpnBtn1.innerHTML = "Claim";
 			}, 3000);
 		}
 	</script>
