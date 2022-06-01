@@ -23,13 +23,14 @@
 <body class="sticky font-poppins">
     <div class="bg-main h-24">
         <div class="flex justify-end">
-            <div class="flex text-2xl py-7 mx-1 font-medium text-[color:white]">
+            <div class="flex text-xl py-8 mx-1 font-medium text-[color:white]">
                 <a href="home.php" class="px-4">Home</a>
                 <a href="#" class="px-4">Our Spaces</a>
+                <a href="#" class="px-4">Customer Service</a>
                 <a href="#" class="px-4">Articles</a>
             </div>
-            <div class="flex text-2xl py-5 mx-4 mr-8 text-main">
-                <button class="bg-sec px-6 py-1 rounded-3xl">Login</button>
+            <div class="flex text-xl py-5 mx-4 mr-8 text-main">
+                <button class="bg-sec px-5 py-1 rounded-3xl">Login</button>
             </div>
         </div>
     </div>
