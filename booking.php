@@ -1,3 +1,34 @@
+<?php
+
+$conn = mysqli_connect("localhost","root","011002","the_spaces");
+if( isset($_POST["submit"])) {
+  //ambil data
+  $nama = $_POST["nama"];
+  $email = $_POST["email"];
+  $no_telp = $_POST["no_telp"];
+  $durasi = $_POST["durasi"];
+  $tanggal = $_POST["tanggal"];
+  $jum_orang = $_POST["jum_orang"];
+  $jenis_kegiatan = $_POST["jenis_kegiatan"];
+  
+  //memasukkan data
+  $query = "INSERT INTO booking
+            VALUES
+            ('$nama','$email','$no_telp','$durasi','$tanggal','$jum_orang','$jenis_kegiatan')
+            ";
+  mysqli_query($conn, $query);
+
+  //cek keberhasilan
+  if( mysqli_affected_rows($conn)>0) {
+   echo "
+   <script>
+    alert('Data berhasil ditambahkan!');
+    </script>
+    ";
+  }
+}
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -43,33 +74,33 @@
       <form action="" method="post">
           <div class="mb-3">
             <label for="nama" class="form-label">Nama</label>
-            <input type="name" class="form-control" id="nama" require>
+            <input type="name" class="form-control" name="nama" id="nama" required>
           </div>
           <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" require>
+            <input type="email" class="form-control" name="email" id="email" required>
           </div>
         <div class="mb-3">
           <label for="no_telp" class="form-label">Nomor Telepon</label>
-          <input type="number" class="form-control" id="no_telp" require>
+          <input type="number" class="form-control" name="no_telp" id="no_telp" required>
         </div>
         <div class="mb-3">
-          <label for="durasi" class="form-label">Durasi</label>
-          <input type="text" class="form-control" id="durasi" require>
+          <label for="durasi" class="form-label">Durasi (Beserta Jam Booking)</label>
+          <input type="text" class="form-control" name="durasi" id="durasi" required>
         </div>
         <div class="mb-3">
           <label for="tanggal" class="form-label">Tanggal</label>
-          <input type="date" class="form-control" id="tanggal" require>
+          <input type="date" class="form-control" name="tanggal" id="tanggal" required>
         </div>
         <div class="mb-3">
           <label for="jum_orang" class="form-label">Jumlah Orang</label>
-          <input type="number" class="form-control" id="jum_orang" require>
+          <input type="number" class="form-control" name="jum_orang" id="jum_orang" required>
         </div>
         <div class="mb-3">
           <label for="jenis_kegiatan" class="form-label">Jenis Kegiatan</label>
-          <input type="text" class="form-control" id="jenis_kegiatan" require>
+          <input type="text" class="form-control" name="jenis_kegiatan" id="jenis_kegiatan" required>
         </div>
-        <a href="home.php"><button class="submit-btn" name="submit" style="margin-top:20px">Submit</button></a>
+        <a href="pembayaran.php"><button class="submit-btn" name="submit" style="margin-top:20px">Submit</button></a>
       </form>
     </div>
 </body>
