@@ -3,18 +3,20 @@
 $conn = mysqli_connect("localhost","root","011002","the_spaces");
 if( isset($_POST["submit"])) {
   //ambil data
+  $id_space = $_POST["id_space"];
   $nama = $_POST["nama"];
   $email = $_POST["email"];
   $no_telp = $_POST["no_telp"];
+  $tipe_durasi = $_POST["tipe_durasi"];
   $durasi = $_POST["durasi"];
   $tanggal = $_POST["tanggal"];
   $jum_orang = $_POST["jum_orang"];
   $jenis_kegiatan = $_POST["jenis_kegiatan"];
   
   //memasukkan data
-  $query = "INSERT INTO booking
+  $query = "INSERT INTO transactions
             VALUES
-            ('$nama','$email','$no_telp','$durasi','$tanggal','$jum_orang','$jenis_kegiatan')
+            ('', '$id_space','$nama','$email','$no_telp','$tipe_durasi','$durasi','$tanggal','$jum_orang','$jenis_kegiatan')
             ";
   mysqli_query($conn, $query);
 
@@ -52,20 +54,20 @@ if( isset($_POST["submit"])) {
         <div class="mb-3">
           <label for="id" class="form-label">Tipe Space</label><br>
           <input type="radio" id="personal" name="id_space" value=1>
-          <label for="personal">Personal</label><br>
-          <input type="radio" id="tim" name="id_space" value=2>
-          <label for="tim">Bersama Tim</label><br>
-          <input type="radio" id="rame" name="id_space" value=3>
-          <label for="rame">Rame-rame</label>
+          <label for="personal">Personal</label><br>
+          <input type="radio" id="tim" name="id_space" value=2>
+          <label for="tim">Bersama Tim</label><br>
+          <input type="radio" id="rame" name="id_space" value=3>
+          <label for="rame">Rame-rame</label>
         </div>
         <div class="mb-3">
           <label for="id" class="form-label">Tipe Durasi</label><br>
           <input type="radio" id="jam" name="tipe_durasi" value="Jam">
-          <label for="jam">Jam</label><br>
-          <input type="radio" id="hari" name="tipe_durasi" value="Hari">
-          <label for="hari">Hari</label><br>
-          <input type="radio" id="minggu" name="tipe_durasi" value="Minggu">
-          <label for="minggu">Minggu</label>
+          <label for="jam">Jam</label><br>
+          <input type="radio" id="hari" name="tipe_durasi" value="Hari">
+          <label for="hari">Hari</label><br>
+          <input type="radio" id="minggu" name="tipe_durasi" value="Minggu">
+          <label for="minggu">Minggu</label>
         </div>
         <div class="mb-3">
           <label for="durasi" class="form-label">Durasi (Beserta Jam Booking)</label>
