@@ -23,10 +23,11 @@ if( isset($_POST["submit"])) {
   //cek keberhasilan
   if( mysqli_affected_rows($conn)>0) {
    echo "
-   <script>
-    alert('Data berhasil ditambahkan!');
+    <script>
+      alert('Data berhasil ditambahkan!');
+      document.location.href = 'pembayaran.php';
     </script>
-    ";
+  ";
   }
   }
   include('navbar.php');
