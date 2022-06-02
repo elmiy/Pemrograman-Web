@@ -22,7 +22,7 @@
           }
         }
       </script>
-    <title>The Spaces | Co-workingspace</title>
+    <title>The Spaces</title>
 </head>
 <body class="sticky font-poppins">
     <div class="bg-main h-24">
@@ -34,7 +34,7 @@
                 <a href="#" class="px-4">Articles</a>
             </div>
             <div class="flex text-xl py-5 mx-4 mr-8 text-main">
-                <button class="bg-sec px-5 py-1 rounded-3xl" style="margin-top: -20px;">Login</button>
+                <button class="bg-sec px-5 py-1 rounded-3xl">Login</button>
             </div>
         </div>
     </div>
