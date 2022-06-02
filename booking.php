@@ -26,51 +26,16 @@ if( isset($_POST["submit"])) {
     </script>
     ";
   }
-}
+  }
+  include('navbar.php');
 ?>
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-    <link rel="stylesheet" href="booking.css" />
-    <script>
-        tailwind.config = {
-          theme: {
-            colors: {
-                main: '#3C4599',
-                sec: '#FAEFB1',
-            },
-            fontFamily: {
-                'poppins': ['Poppins'] 
-            },
-          }
-        }
-      </script>
-    <title>The Spaces | Co-workingspace</title>
-</head>
+<link rel="stylesheet" href="booking.css" />
 <body class="sticky font-poppins">
-    <div class="bg-main h-24">
-        <div class="flex justify-end">
-            <div class="flex text-xl py-8 mx-1 font-medium text-[color:white]">
-                <a href="home.php" class="px-4">Home</a>
-                <a href="#" class="px-4">Our Spaces</a>
-                <a href="#" class="px-4">Customer Service</a>
-                <a href="#" class="px-4">Articles</a>
-            </div>
-            <div class="flex text-xl py-5 mx-4 mr-8 text-main">
-                <button class="bg-sec px-5 py-1 rounded-3xl">Login</button>
-            </div>
-        </div>
-    </div>
     <div class="headline">
       <a href="home.php"><img src="../Pemrograman-Web-main/pic/booking-back-arrow.png" alt="Back"></a>
     </div>
-    <div class="mx-auto">
+    <div class="mx-auto pt-24">
       <form action="" method="post">
           <div class="mb-3">
             <label for="nama" class="form-label">Nama</label>
@@ -83,6 +48,24 @@ if( isset($_POST["submit"])) {
         <div class="mb-3">
           <label for="no_telp" class="form-label">Nomor Telepon</label>
           <input type="number" class="form-control" name="no_telp" id="no_telp" required>
+        </div>
+        <div class="mb-3">
+          <label for="id" class="form-label">Tipe Space</label><br>
+          <input type="radio" id="personal" name="id_space" value=1>
+          <label for="personal">Personal</label><br>
+          <input type="radio" id="tim" name="id_space" value=2>
+          <label for="tim">Bersama Tim</label><br>
+          <input type="radio" id="rame" name="id_space" value=3>
+          <label for="rame">Rame-rame</label>
+        </div>
+        <div class="mb-3">
+          <label for="id" class="form-label">Tipe Durasi</label><br>
+          <input type="radio" id="jam" name="tipe_durasi" value="Jam">
+          <label for="jam">Jam</label><br>
+          <input type="radio" id="hari" name="tipe_durasi" value="Hari">
+          <label for="hari">Hari</label><br>
+          <input type="radio" id="minggu" name="tipe_durasi" value="Minggu">
+          <label for="minggu">Minggu</label>
         </div>
         <div class="mb-3">
           <label for="durasi" class="form-label">Durasi (Beserta Jam Booking)</label>
