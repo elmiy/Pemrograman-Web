@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('spaces', function (Blueprint $table) {
             $table->id()->unique();
             $table->string('nama_spaces');
-            $table->string('tipe_spaces');
             $table->integer('harga_jam')->nullable();
             $table->integer('harga_hari')->nullable();
             $table->integer('harga_minggu')->nullable();

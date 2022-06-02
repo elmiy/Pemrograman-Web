@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Vouchers extends Model
 {
     use HasFactory;
+    public function voucher() 
+	{
+	     return $this->belongsTo('App\Voucher','id_voucher', 'id');
+	}
 }

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TransactionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,14 +13,34 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
-    return view('navbar');
+    return view('home');
 });
 
-Route::get('/bayar', function () {
-    return view('pembayaran');
+Route::get('/spaces', function () {
+    return view('spaces');
 });
-Route::get('/keranjang', function () {
-    return view('keranjang');
+Route::get('/trans', [TransactionController::class, 'index'])->name('trans');
+Route::post('/trans', [TransactionController::class, 'trans']);
+
+Route::get('/payment/{id}', [TransactionController::class, 'paymentGet'])->name('payment');
+Route::post('/payment/{id}', [TransactionController::class, 'payment']);
+Route::get('/fin', function () {
+    return view('pembayaranfin');
+});
+
+Route::get('/voucher', function () {
+    return view('voucher');
+});
+
+Route::get('/cs', function () {
+    return view('cs');
+});
+
+Route::get('/article', function () {
+    return view('article');
+});
+
+Route::get('/booking', function () {
+    return view('booking');
 });

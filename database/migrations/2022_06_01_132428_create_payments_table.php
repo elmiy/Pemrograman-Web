@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('transaction_id');
+            $table->foreignId('id_transaction');
+            $table->foreignId('id_voucher')->nullable();
             $table->string('tipe_durasi');
             $table->integer('durasi');
             $table->integer('harga');
