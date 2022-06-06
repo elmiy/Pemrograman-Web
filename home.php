@@ -52,7 +52,7 @@ include 'config.php';
             } else { ?>
                 <section class="d-flex align-items-center" style="height: 400px; margin: auto;">
                     <div class="text-black-50 font-weight-light" style="font-size: 50px;">
-                        Artikel Tidak di Temukan
+                        Artikel Tidak Di Temukan
                     </div>
                 </section>
 
